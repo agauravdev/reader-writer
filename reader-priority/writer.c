@@ -61,7 +61,7 @@ int main()
 
     while (exit != 'e')
     {
-        printf("\n\nEnter e to exit writing mode   ");
+        printf("\n\nEnter 'e' to exit writing mode : ");
         scanf("%c", &exit);
     }
 

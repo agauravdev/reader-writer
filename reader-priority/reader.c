@@ -10,6 +10,7 @@ int main() {
     sem_t *sem_reader_count_access = sem_open("/reader_count_access", 0);
 
     int reader_count;
+    printf("Waiting for access of the file...\n\n");
 
     sem_wait(sem_reader_count_access);
 
@@ -18,6 +19,7 @@ int main() {
     sem_getvalue(sem_reader_count, &reader_count);
 
     if(reader_count == 1){
+        printf("First Reader : Waiting for access of the file...\n\n");
         sem_wait(sem_critical_access);
     }
 
@@ -51,7 +53,7 @@ int main() {
     char exit;
 
     while(exit != 'e'){
-        printf("\n\nEnter e to exit reading mode   ");
+        printf("\n\nEnter 'e' to exit reading mode : ");
         scanf("%c", &exit);
     }
 
