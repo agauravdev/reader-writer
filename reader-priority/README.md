@@ -20,3 +20,9 @@ To see the semaphores on your linux system run the following command
 ```sh
 ls -al /dev/shm/sem.*|more
 ```
+
+To see the values of the semaphores at any given point of time run 
+
+```sh
+./semaphore_reader.out
+```
