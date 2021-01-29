@@ -5,7 +5,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-void write(sem_t *sem_critical_access, sem_t *sem_reader_count)
+void writer(sem_t *sem_critical_access, sem_t *sem_reader_count)
 {
     sem_wait(sem_critical_access);
 
